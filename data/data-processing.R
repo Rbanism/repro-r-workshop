@@ -4,7 +4,6 @@ library(tidyverse)
 
 df <- readxl::read_excel("data/_Urbanization - Dataset - v1.xlsx", sheet="data-for-countries-etc-by-year")
 
-
 regions <- readxl::read_excel("data/_Urbanization - Dataset - v1.xlsx", 
                               sheet = "input-data-pop-in-cities-from-U", 
                               skip = 16)
@@ -53,3 +52,25 @@ regs <- regs %>%
   arrange(country)
 
 readr::write_csv(regs, file = "data/countries.csv")
+
+
+# merge with main dataset
+df <- df %>%
+  dplyr::left_join(regs, by = c("name" = "country"))
+
+
+# edit columns to be easier to work with
+df <- df %>%
+  mutate(population_small_cities = `Population in cities with less than 300k people` + `Population in cities with 300k to 500k people`,
+         population_medium_cities = `Population in cities with 500k  to 1m people`,
+         population_large_cities = `Population in cities with 1 to 5m people`,
+         population_very_large_cities = `Population in cities with 5 to 10m people` + `Population in cities with more than 10m people`,
+         perc_pop_small_cities = `Population in cities with less than 300k people (% total population)` + `Population in cities with 300k to 500k people (% total population)`,
+         perc_pop_medium_cities = `Population in cities with 500k  to 1m people (% total population)`,
+         perc_pop_large_cities = `Population in cities with 1 to 5m people (% total population)`,
+         perc_pop_very_large_cities = `Population in cities with 5 to 10m people (% total population)` + `Population in cities with more than 10m people (% total population)`) %>%
+  select(geo, code, continent, name, time, starts_with("population_"), starts_with("perc_pop"))
+
+readr::write_csv(regs, file = "data/urban_population.csv")
+
+
