@@ -1,0 +1,23 @@
+---
+title: "Automation for Rbanism"
+output: html_document
+date: "2022-08-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages
+
+
+## Load data
+
+
+## Small transformations in the data
+
+
+## Visualize the data
+
+
+## Repeat with a full dataset
