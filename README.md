@@ -9,7 +9,7 @@
 | 11:15 | Automating with R | Barbara Vreede | [automation workflow](exercises/02-automation.html) |
 | 12:30 | _Lunch break_ | | |
 | 13:30 | Automating with R | Barbara Vreede | |
-| 14:00 | Literate programming | Claudiu Forgaci | |
+| 14:00 | Literate programming | Claudiu Forgaci | [Getting started with R Markdown](https://datacarpentry.org/r-socialsci/05-rmarkdown/index.html) |
 | 15:00 | _Coffee break_ | | |
 | 15:15 | Literate programming | Claudiu Forgaci | |
 | 15:45 | Publication | Claudiu Forgaci | |
