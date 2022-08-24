@@ -71,6 +71,6 @@ df <- df %>%
          perc_pop_very_large_cities = `Population in cities with 5 to 10m people (% total population)` + `Population in cities with more than 10m people (% total population)`) %>%
   select(geo, code, continent, name, time, starts_with("population_"), starts_with("perc_pop"))
 
-readr::write_csv(regs, file = "data/urban_population.csv")
+readr::write_csv(df, file = "data/urban_population.csv")
 
 
