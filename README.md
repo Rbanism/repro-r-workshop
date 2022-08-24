@@ -3,7 +3,7 @@
 
 | Time | Subject | Teacher | Materials |
 |--:|:--|:--|:--|
-| 9:30 | Introduction | Claudiu Forgaci | |
+| 9:30 | Introduction | Claudiu Forgaci | [Introduction](http://reproducible-science-curriculum.github.io/2015-05-14-reproducible-science-duke/intro-slides/intro-01-slides.html#/) |
 | 10:00 | Project organization | Barbara Vreede | |
 | 11:00 | _Coffee break_ | | |
 | 11:15 | Automating with R | Barbara Vreede | [automation workflow](exercises/02-automation.html) |
