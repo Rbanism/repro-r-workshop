@@ -1,12 +1,12 @@
-# === Pre-workshop survey ===
+# Pre-workshop survey
 
-## === Welcome screen ===
+## Welcome screen
 
 *Pre-Workshop Survey (adapted from the Carpentries)*
 
 Thank you for taking the time to fill in this survey in preparation to the Reproducible and Automated Research with R for Urbanists workshop. You are not required to take this survey to participate in our training. You may quit the survey at any time or skip any question.
 
-## --- page break ---
+---
 
 Do you consent to taking this survey? *
 
@@ -18,13 +18,13 @@ Are you 18 years of age or above? *
 * yes
 * no
 
-## --- page break ---
+---
 
 Please enter a unique identifier as follows: Number of siblings (as numeric) + First two letters of the city you were born in (lowercase) + First three letters of your current street (lowercase). *
 
 (short text answer)
 
-## --- page break ---
+---
 
 What is your current position? *
 
@@ -48,7 +48,7 @@ check all that apply
 * Architecture
 * Other: _____________
 
-## --- page break ---
+---
 
 Which operating system will you use for the workshop?
 
@@ -84,7 +84,7 @@ Check all that apply
 * Opinion of colleagues
 * Other: ______________
 
-## --- page break ---
+---
 
 How often do you currently use any of the following?
 
@@ -153,7 +153,7 @@ How did you find out about this workshop?
 * Heard about the workshop from a funding organization or program officer
 * Other (open text)
 
-## --- page break ---
+---
 
 The next set of questions is optional. If you prefer no to answer a question, please click the down arrow on your keyboard, or scroll down to navigate to the next question. Please rate your level of agreement with the following statements.
 
@@ -185,15 +185,15 @@ Using a programming language (like R or Python) can make me more efficient at wo
 Strongly Disagree		Neutral		Strongly Agree
 1	2	3	4	5
 
-## --- page break ---
+---
 
 Please share what you most hope to learn from participating in this workshop.
 
 (long text answer)
 
-## --- page break ---
+---
 
-## === Thank you screen ===
+## Thank you screen
 
 Thank you for completing this survey! Your input is used to prepare and improve our workshops.
 
