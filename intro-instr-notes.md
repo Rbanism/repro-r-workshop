@@ -18,17 +18,20 @@ pre-workshop email and/or the workshop website. Note that they will not need the
 
 ## Welcome + overview
 
-- Welcome the participants and briefly go over the schedule for the workshop.
-    - Schedule is purposefully not included on the slides since each workshop might
-    follow a slightly different schedule.
+- Welcome the participants.
+
 - Remind them the mission statement and the tagline:
     - Mission statement: To Train researchers in the best practices and approaches of reproducible research and accelerate scientific progress
     - Tagline: Accelerating scientific progress through reproducible science.
+
+- Briefly go over the schedule for the workshop.
+
 - Getting to know you exercise and group discussion:
    - 6 months from now can you or someone else go back to your project and understand what was going on? What types of methods do you use to document a project?
-   - Take notes on the board as to tools people use.
+   - Take notes on the board of tools people use.
+
 - Review a few case studies:
-    - Some are already discussed in `intro-01-slides`
+    - Some are already discussed in `01-intro-slides`
     - If you prefer to discuss others, see some examples at https://github.com/Reproducible-Science-Curriculum/Reproducible-Science-Hackathon-Dec-08-2014/wiki/Irreproducible-Examples
 
 ## Exercise: Motivating reproducibility (40 mins)
@@ -52,56 +55,16 @@ data.<br>
 *Stretch goal:* Add lines for Mexico and US.
 </div>
 
-#### Tips for instructors:
-
-- Some people will assume they have to do this in R, even if they're not an R user,
-remind them that the whole point of the exercise is that they do this in an
-environment they use / are comfortable with. (Assure them that we'll get to R
-later...)
-- Remind them that they need to document -- in past workshops most people got hung
-up on doing, then documenting, and then the second part of the exercises didn't
-have as much of a punch. More important that they document what they do (even if
-not all tasks) than that they finish.
-
-### Part 1: Swap + discuss (15 minutes)
-
-#### From the slides:
-
-<div class="boxed">
-Introduce yourself to your collaborator and tell them why you're here.
-
-1. Swap instructions / documentation with your collaborator, and try to reproduce
-their work, first **without talking to each oher**.
-If your collaborator does not have the software they need to reproduce your work, we
-encourage you to either help them install it or walk them through it on your computer
-in a way that would emulate the experience. (Remember, this could be part of the
-irreproducibility problem!)
-2. Then, talk to each other about challenges you faced (or didn't face) or why
-you were or weren't able to reproduce their work.
-</div>
-
-#### Tips for instructors:
-
-- People not having the software their partner used is likely to be the biggest issue
-in this exercise. There isn't really enough time to install sofware, or software might
-be proprietary. In these cases ask people to keep it to a discussion.
-- Encourage people to read code, even if they don't know the language. If well
-documented/commented, one might still be able to follow the code even if they couldn't
-write it themselves from scratch.
-
 ### Reflection - group discussion: (5 mins)
 
 #### From the slides:
 
 <div class="boxed">
-- What tools did you use (Excel / R / Python / Word / plain text etc.)?
-- Were you successful in reproducing each others' work?
-
-<br>
-
+- What tools would you use (Excel / R / Python / Word / plain text etc.)?
+- How would you ensure that others can reproduce your work?
 - What would happen if your collaborator is no longer available to walk you through
 their analysis?
-- What made it easy / hard for reproducing your partners' work?
+- What would make it easy / hard for reproducing someone else's work?
 - What would have to happen if
     - you had to swap out the dataset or extend the analysis further?
     - you caught further data errors and had to re-create the analysis
@@ -127,7 +90,7 @@ feel free to keep it short if exercise took longer than intended.
 
 ## R Markdown demo
 
-The goal of is to demonstrate how each of the goals of Organization, Documentation, Dissemination, and Automation can be addressed in an R Markdown document.
+The goal of is to demonstrate how each of the goals of Organization, Automation, Documentation, and Dissemination, can be addressed in an R Markdown document.
 
 ### Key steps introduced:
 
@@ -150,7 +113,7 @@ documents (R Markdown)
 - R Markdown syntax
     - Human readable!
     - Limited, so not too time consuming to master
-- Self contained workspace
+- Self-contained workspace
 
 ### Extend the analysis:
 
