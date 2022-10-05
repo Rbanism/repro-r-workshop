@@ -1,13 +1,13 @@
 ---
 title: "Pick four - comparing trends in population  over time"
-output: pdf_document
+output: pdf_document # other common outputs are html_document and word_document, but many more exist
 ---
 
 ## Purpose
 
-The purpose of this report is to compare the population trends for four countries of your choosing.  In addition, this serves as an example of literate programming. Literate programming is a way to document how you performed your analysis. It serves as a guide to other to others (and your future self) how to reproduce your work. 
+The purpose of this report is to compare the population trends for four countries of your choosing.  In addition, this serves as an example of literate programming. Literate programming is a way to document how you performed your analysis. It serves as a guide to others (and your future self) how to reproduce your work. 
 
-## Required Libraries 
+## Required Packages 
 ```{r}
 library(ggplot2)
 ```
@@ -20,25 +20,25 @@ Always add as many details as possible about your data including where it came f
 
 - Processed data via [@jennybc](https://github.com/jennybc), [R package available here](https://github.com/jennybc/gapminder). The [data-raw](https://github.com/jennybc/gapminder/tree/master/data-raw) sub-directory reveals the journey from Gapminder.org's Excel workbooks to increasingly clean and tidy data. 
 
-**Read in data**: To read in the data, make sure this file is in the same directory/folder as the `gapminderDataFiveYear.txv` file.  To set the proper working directory go to Session > Set Working Directory > To Source File Location. 
+**Read in data**: To read in the data, make sure this file is in the same directory/folder as the `gapminderDataFiveYear.tsv` file.
 
 ```{r}
 gapMinder <- read.delim("gapminderDataFiveYear.tsv") 
 
 ### Check data 
-head(gapMinder) #First 10 lines of dataset
+head(gapMinder, n = 10L) #First 10 lines of dataset
 dim(gapMinder) #number of rows and columns in data set
 ```
 
 You can see what countries are available by looking at the how many unique categories are in the country column of the gapMinder dataset.
 
 ```{r, results='hide'}
-levels(gapMinder$country)
+levels(factor(gapMinder$country))
 ```
 
 ### Pick Four Countries
 
-Now pick four countries that you are intrested in.  Just replace with the countries name below.
+Now pick four countries that you are interested in. Just replace with the countries name below.
 
 ```{r}
 countryName1 <- "India"
@@ -106,7 +106,7 @@ ggplot(country3, aes(year, pop)) +
   theme(plot.title = element_text(size = 15, face = "bold"))
 ```
 
-**Notes** Maybe a country has an unusual distribution and we want to label the graph with the year. We added `label = year` to the first line of the code below.  To display the text we also added the `geom_text(hjust = 1, vjust = 0, size = 5)` option.
+**Notes** Maybe a country has an unusual distribution and we want to label the graph with the year. We added `label = year` to the first line of the code below.  To display the text we also added the `geom_text(hjust = 1.3, vjust = 0, size = 3)` option.
 
 ```{r}
 ggplot(country3, aes(gdpPercap, lifeExp, size = pop, label = year)) + 
@@ -153,7 +153,11 @@ ggplot(allCountries, aes(year, pop, color=country)) +
   theme(plot.title = element_text(lineheight=.8, face = "bold"))
 ```
 
-What about what is occuring in a particular year?  You can change the year by changing the code in the `year == 2007` section.  To look at what years are possible use `allCountries$year`.
+What about what is occurring in a particular year?  You can change the year by changing the code in the `year == 2007` section.  To look at what years are possible use `allCountries$year`.
+
+```{r}
+allCountries$year
+```
 
 ```{r}
 yr <- 2007
