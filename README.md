@@ -1,4 +1,4 @@
-# Reproducible Research with R for Urbanists
+# Reproducible and Automated Research with R for Urbanists
 
 
 | Time | Subject | Teacher | Materials |
