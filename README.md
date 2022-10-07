@@ -3,6 +3,7 @@
 
 | Time | Subject | Teacher | Materials |
 |--:|:--|:--|:--|
+| 9:00 | _Walk-in & setup troubleshooting_ | | |
 | 9:30 | Introduction | Claudiu Forgaci | Introduction [Part 1](http://reproducible-science-curriculum.github.io/2015-05-14-reproducible-science-duke/intro-slides/intro-01-slides.html#/) and [Part 2](http://reproducible-science-curriculum.github.io/2015-05-14-reproducible-science-duke/intro-slides/intro-02-slides.html#/)|
 | 10:00 | Project organization | Barbara Vreede | |
 | 11:00 | _Coffee break_ | | |
