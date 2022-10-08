@@ -1,0 +1,90 @@
+---
+title: "My Awesome Report"
+author: "Claudiu Forgaci"
+output: html_document
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+# Make sure that gapminderDataFiveYear.tsv is in the same directory with this Rmd file 
+gapMinder <- read.delim("gapminderDataFiveYear.tsv") 
+```
+
+# Heading
+
+## Sub-heading
+
+Text...
+
+### Sub-sub-heading
+
+Text...
+
+## Introduction
+
+This report uses the **tidyverse** package along with the *gapminder* dataset, which has columns that include:
+
+1.  country
+
+-   Name of country
+
+2.  year
+
+-   Year of observation
+
+3.  pop
+
+-   Population of country
+
+4.  continent
+
+-   Continent where the country is located
+
+5.  lifeExp
+
+-   Life expectancy
+
+6.  gdpPercap
+
+-   GDP per capita
+
+## Insert table
+
+The average GDP per capita grouped by `continent`.
+
+```{r}
+gapMinder %>%   
+  # filter(!is.na(continent)) %>%   
+  group_by(continent) %>%   
+  summarise(mean_gdpPercap = mean(gdpPercap)) %>%   
+  knitr::kable(caption = "We can also add a caption.",
+               col.names = c("Continent", "Mean GDP per Capita"))
+```
+
+## Inline R code
+
+```{r}
+# Replace the value of cont with your continent of choice
+cont <- "Europe"
+mean_continent <- gapMinder |>  
+  group_by(continent) |>  
+  summarise(mean_lifeExp = mean(lifeExp)) |> 
+  filter(continent == cont)
+mean_continent
+```
+
+The average life expectancy in `r cont` is `r round(mean_continent$mean_lifeExp, 2)`.
+
+## Plots
+
+```{r}
+continents <- factor(gapMinder$continent)
+
+plot(continents)
+```
+```{r echo=FALSE}
+ggplot(data = gapMinder,
+       mapping = aes(x = continent)) +
+  geom_bar()
+```
+
