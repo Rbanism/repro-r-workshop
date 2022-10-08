@@ -3,7 +3,7 @@
 -   `data/gapminderDataFiveYear.tsv`: the cleaned and subset version of the Gapminder dataset available from the [gapminder R package](http://github.com/jennybc/gapminder).
 -   `data/urban_population.csv`: a subset version of the Gapminder dataset.
 -   `documents/countryPick.Rmd`: R Markdown file demonstrating various features of literate programming with R.
--   `R/`: an empty folder in which one or more R scripts will be added during the workshop.
+-   `R/`: an empty folder in which R scripts will be added during the workshop.
 
 ## Copyright for the data used in this workshop
 
