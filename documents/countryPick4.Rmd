@@ -9,6 +9,7 @@ The purpose of this report is to compare the population trends for four countrie
 
 ## Required Packages 
 ```{r}
+library(here)
 library(ggplot2)
 ```
 
