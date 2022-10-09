@@ -12,7 +12,7 @@ output:
 
 ## Rbanism
 
-> - **Organised as part of [Rbanism](https://www.esciencecenter.nl/claudiu-forgaci/)**, a Netherlands eScience Centre fellowship project.
+> - **Organised as part of [Rbanism](https://www.esciencecenter.nl/claudiu-forgaci/)**, a Netherlands eScience Center fellowship project.
 
 > - **Rbanism aims to build capacity, competence, and confidence** for working with data and research software in the urbanism research community at large.
 
