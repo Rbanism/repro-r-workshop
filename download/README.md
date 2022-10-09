@@ -5,7 +5,7 @@
 -   `data/urban_population.csv`: a subset version of the Gapminder dataset.
 -   `documents/countryPick.Rmd`: R Markdown file demonstrating various features of literate programming with R.
 -   `documents/intro-demo.Rmd`: demo R Markdown file used in the introduction.
--   `documents/checklist.Rmd`: reproducibility checklist compiled for the Rbanism project from various sources.
+-   `documents/checklist.md`: reproducibility checklist compiled for the Rbanism project from various sources.
 -   `R/`: an empty folder in which R scripts will be added during the workshop.
 
 ## Copyright for the data used in this workshop
