@@ -1,0 +1,27 @@
+---
+title: "Organization"
+author: "Barbara Vreede"
+date: "October 10, 2022"
+output:
+  ioslides_presentation:
+    highlight: pygments
+    widescreen: yes
+---
+
+# Project organization
+
+## A good example
+
+```
+--Root/
+  |-data/
+  |-documents/
+```
+
+
+## Three types of folders
+
+- Read only (data eg)
+- Human-writable
+- Project-generated
+
