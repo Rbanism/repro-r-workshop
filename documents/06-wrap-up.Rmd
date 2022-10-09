@@ -20,7 +20,7 @@ output:
 
 ## Topics we did not cover
 
-> - **An in-depth introduction to R.** Consider joining one of our two-day [Data Carpentry workshops](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/data-carpentry-workshops) (open to researchers from TUD, EUR, ULeiden & UvA).
+> - **In-depth introduction to R programming.** Consider joining one of our two-day [Data Carpentry workshops](https://www.tudelft.nl/en/library/research-data-management/r/training-events/training-for-researchers/data-carpentry-workshops) (open to researchers from TUD, EUR, ULeiden & UvA).
 > - **Version control.** Consider joining one of our two-day [Software Carpentry workshops](https://www.tudelft.nl/library/research-data-management/r/training-evenementen/training-voor-onderzoekers/software-carpentry-workshops) (open to researchers from TUD, EUR, ULeiden & UvA).
 > - **Reproducible environments**: 
 >     - [Docker containers](https://the-turing-way.netlify.app/reproducible-research/renv/renv-containers.html) to reproduce the entire system used for the research; 
@@ -37,4 +37,6 @@ output:
 
 > - **Stay tuned for the next round of events in spring 2023 on Scalable GIS!** - 1-day workshop + half-day hackathon + 1-month challenge.
 
-> - **Drinks!** Thank you all for participating!
+> - Thank you all for participating!
+
+> - **Drinks!**
