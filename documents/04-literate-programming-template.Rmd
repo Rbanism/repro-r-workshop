@@ -2,12 +2,17 @@
 title: "My Awesome Report"
 author: "Claudiu Forgaci"
 output: html_document
+bibliography: references.bib
 ---
 
-```{r, include=FALSE}
+```{r setup, include=FALSE}
+# Load packages
+library(here)
 library(tidyverse)
-# Make sure that gapminderDataFiveYear.tsv is in the same directory with this Rmd file 
-gapMinder <- read.delim("gapminderDataFiveYear.tsv") 
+
+# Load data
+path <- here("data", "gapminderDataFiveYear.tsv")
+gapMinder <- read.delim(path)
 ```
 
 # Heading
@@ -22,31 +27,31 @@ Text...
 
 ## Introduction
 
-This report uses the **tidyverse** package along with the *gapminder* dataset, which has columns that include:
+This report uses the **tidyverse** package [@tidyverse] along with the *gapminder* dataset [@gapminder], which has columns that include:
 
 1.  country
 
--   Name of country
+    -   Name of country
 
 2.  year
 
--   Year of observation
+    -   Year of observation
 
 3.  pop
 
--   Population of country
+    -   Population of country
 
 4.  continent
 
--   Continent where the country is located
+    -   Continent where the country is located
 
 5.  lifeExp
 
--   Life expectancy
+    -   Life expectancy
 
 6.  gdpPercap
 
--   GDP per capita
+    -   GDP per capita
 
 ## Insert table
 
@@ -80,11 +85,15 @@ The average life expectancy in `r cont` is `r round(mean_continent$mean_lifeExp,
 ```{r}
 continents <- factor(gapMinder$continent)
 
+# This is a basic plot
 plot(continents)
 ```
+
 ```{r echo=FALSE}
+# A better-looking plot using the ggplot2 package
 ggplot(data = gapMinder,
        mapping = aes(x = continent)) +
   geom_bar()
 ```
 
+## References
