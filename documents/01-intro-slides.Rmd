@@ -10,198 +10,100 @@ output:
 
 # Overview
 
-## Tagline and mission
+## Rbanism
 
-Tagline: Accelerating scientific progress through reproducible science
+> - **Organised as part of [Rbanism](https://www.esciencecenter.nl/claudiu-forgaci/)**, a Netherlands eScience Centre fellowship project.
 
-Mission: To train researchers in the best practices and approaches of reproducible research and accelerate scientific progress.
+> - **Rbanism aims to build capacity, competence, and confidence** for working with data and research software in the urbanism research community at large.
+
+> - **This workshop is the first of an event series** focusing on reproducibility, automation and scalability in urbanism research.
+
+> - **Promote the practice of reproducibility and automation** necessary for accelerating scientific progress in urbanism and associated fields.
+
 
 ## Workshop schedule
 
--   **Introduction**
-    -   *Coffee break*
+-   **Introduction** (9:30)
 -   **Organisation**
+    -   *Coffee break*
 -   **Automation I**
-    -   *Lunch break*
+    -   *Lunch break* (12:30-13:30)
 -   **Automation II**
 -   **Literate programming I**
     -   *Coffee break*
 -   **Literate programming II**
--   **Publication**
-    -   *Wrap-up & drinks*
+-   **Publishing**
+    -   *Wrap-up & drinks* (16:30)
+
 
 ## Introduction
 
 -   Getting to know you
--   Recognize the problems that reproducible research helps address via case studies
-<!-- -   **Exercise**: Identify pain points in getting your analysis to be reproducible -->
+-   Recognize the problems that reproducible research helps address
 -   Introduce tools that address your pain points in making your research reproducible
 -   **Demo**: Computational toolkit for reproducible data analysis
 
+
 ## Getting to know you...
 
-with respect to reproducibility
 
-# Why should we care about reproducibility?
 
-## Example 1 urbanism
 
-## Example 2 urbanism
+## ...with respect to reproducibility
 
-<!-- ## Science retracts gay marriage paper without agreement of lead author -->
-
-<!-- - Science retracted a study of how canvassers can sway people's opinions about  -->
-
-<!-- gay marriage. -->
-
-<!-- - Science Editor-in-Chief: Original survey data not made available for independent -->
-
-<!-- reproduction of results + Survey incentives misrepresented + Sponsorship  -->
-
-<!-- statement false -->
-
-<!-- - Two Berkeley grad students attempted to replicate the study and discovered that  -->
-
-<!-- the data must have been faked. -->
-
-<!-- - Methods we'll discuss today can't prevent this, but they can make it easier to  -->
-
-<!-- discover such issues. -->
-
-<!-- <small> -->
-
-<!-- Source:  -->
-
-<!-- http://news.sciencemag.org/policy/2015/05/science-retracts-gay-marriage-paper-without-lead-author-s-consent -->
-
-<!-- </small> -->
-
-<!-- ## Seizure study retracted after authors realize data got "terribly mixed" -->
-
-<!-- From the authors of **Low Dose Lidocaine for Refractory Seizures in Preterm Neonates**: -->
-
-<!-- *"The article has been retracted at the request of the authors. After carefully  -->
-
-<!-- re-examining the data presented in the article, they identified that data of two  -->
-
-<!-- different hospitals got terribly mixed. The published results cannot be reproduced in -->
-
-<!-- accordance with scientific and clinical correctness."* -->
-
-<!-- <small> -->
-
-<!-- Source: http://retractionwatch.com/2013/02/01/seizure-study-retracted-after-authors-realize-data-got-terribly-mixed/ -->
-
-<!-- </small> -->
-
-<!-- ## Bad spreadsheet merge kills depression paper, quick fix resurrects it -->
-
-<!-- - The authors informed the journal that the merge of lab results and other survey  -->
-
-<!-- data used in the paper resulted in an error regarding the identification codes. -->
-
-<!-- - **Original conclusion:** Lower levels of CSF IL-6 were associated with current  -->
-
-<!-- depression and with future depression [...]. -->
-
-<!-- - **Revised conclusion:** Higher levels of CSF IL-6 and IL-8 were associated with  -->
-
-<!-- current depression [...]. -->
-
-<!-- <small> -->
-
-<!-- Source:  -->
-
-<!-- http://retractionwatch.com/2014/07/01/bad-spreadsheet-merge-kills-depression-paper-quick-fix-resurrects-it/ -->
-
-<!-- </small> -->
-
-<!-- # Exercise: Motivating reproducibility -->
-
-<!-- ## Exercise: Motivating reproducibility -->
-
-<!-- This is a two-part exercise: -->
-
-<!-- **Part 1:** Analyze + document -->
-
-<!-- **Part 2:** Swap + discuss -->
-
-<!-- ## Part 1: Analyze + document -->
-
-<!-- Complete the following tasks and **write instructions / documentation** for your  -->
-
-<!-- collaborator to reproduce your work starting with the original dataset  -->
-
-<!-- (`data/gapminder-5060.csv`). -->
-
-<!-- 1. Visualize life expectancy over time for Canada in the 1950s and 1960s using  -->
-
-<!-- a line plot. -->
-
-<!-- 2. Something is clearly wrong with this plot! Turns out there's a data error  -->
-
-<!-- in the data file: life expectancy for Canada in the year 1957 is coded -->
-
-<!-- as `999999`, it should actually be `69.96`. Make this correction. -->
-
-<!-- 3. Visualize life expectancy over time for Canada again, with the corrected data.<br> -->
-
-<!-- *Stretch goal:* Add lines for Mexico and United States. -->
-
-<!-- ## Part 2: Swap + discuss -->
-
-<!-- Introduce yourself to your collaborator and tell them why you're here. -->
-
-<!-- 1. Swap instructions / documentation with your collaborator, and try to reproduce  -->
-
-<!-- their work, first **without talking to each oher**.  -->
-
-<!-- If your collaborator does not have the software they need to reproduce your work, we  -->
-
-<!-- encourage you to either help them install it or walk them through it on your computer  -->
-
-<!-- in a way that would emulate the experience. (Remember, this could be part of the  -->
-
-<!-- irreproducibility problem!) -->
-
-<!-- 2. Then, talk to each other about challenges you faced (or didn't face) or why  -->
-
-<!-- you were or weren't able to reproduce their work. -->
-
-## Reflection
-
--   What tools did you use (Excel / R / Python / Word / plain text etc.)?
--   Were you successful in reproducing each others' work?
+-   What tools do you use (Excel / R / Python / Word / plain text etc.)?
 -   What would happen if your collaborator is no longer available to walk you through their analysis?
 -   What made it easy / hard for reproducing your partners' work?
 -   What would have to happen if
     -   you had to swap out the dataset or extend the analysis further?
     -   you caught further data errors and had to re-create the analysis with corrections?
     -   you had to revert back to the original dataset?
+    
 
-## Summary
+# Why should we care about reproducibility?
 
--   Everyone struggles with reproducibility and it is a hindrance to moving science forward
+## Motivating reproducibility
 
--   Even with a fairly simple analysis challenges were faced in four main areas: organization, documentation, automation, and dissemination
+“Computational notebooks [...] open up the world of analytics to [...] disciplines that encompass diverse methodologies and skillsets [such as] urban planning [...] Some urban planners focus on policymaking [...] Others employ qualitative methods to work in and with vulnerable communities. Others develop simulation models to forecast urbanization patterns and infrastructure needs. Others intermingle these, and many more, different approaches to understanding and shaping the city. Yet **all urban planners benefit [or should!] from basic quantitative literacy and an ability to reason critically with data**. This scholarly and professional imperative aligns with **the growing importance of computational thinking in the urban context** and parallel trends in geocomputation [...], geographic data science [...], and the open-source/open-science movements [...].” ([Boeing, 2019, p. 40](https://doi.org/10.18335/region.v6i3.278))
 
--   Over the two day workshop, data analysis tasks will become more complex as we gather more data and ask more complicated questions, so we need better tools and workflows to combat issues arising in these areas
 
-# Four facets of reproducibility
+## Motivating reproducibility
+
+“**toolkits relying on point-and-click interfaces are inefficient in the era of big data.** 
+Due to the limited scope for automation of tasks, not only is workflow efficiency 
+reduced but also the reproducibility of the underlying research is compromised, 
+because this largely depends on the (often undocumented) sequence of decisions 
+manually operating the software. [...] We then argue that **the field [of urban morphology] 
+needs a shift from dominant traditional geographic information system (GIS) environments 
+based on a graphical user interface (GUI; e.g., QGIS or ArcMap) towards reproducible
+open code-based workflows.**” ([Fleischmann et al., 2022, p. 3](https://onlinelibrary.wiley.com/doi/10.1111/gean.12302))
+
+
+## Motivating reproducibility
+
+> - Even qualitative work like literature reviews can be done in a systematic, reproducible and automated way (e.g., see 
+[Krishnan et al., 2021](https://link.springer.com/chapter/10.1007/978-3-030-76059-5_24))
+> - A reproducible workflow allows for close scrutiny and interaction with the data and results of a publication, potentially
+leading to new insights as well (e.g., see [Cottineau, 2022](https://link.springer.com/article/10.1007/s11192-021-04256-8))
+> - Reproducibility can contribute to increasing the scientific legitimacy of design-focused urbanism research 
+often regarded as pseudoscientific (see [Marshall, 2012](https://link.springer.com/article/10.1057/udi.2012.22))
+
+
+## However, these are potentials yet to meet
+
+> - Everyone (urbanists and non-urbanists) struggles with reproducibility and it is a hindrance to moving science forward
+> - Even with a fairly simple analysis challenges are usually faced in four main areas: organization, automation, documentation, and dissemination
+
 
 ## Four facets of reproducibility
 
-2.  **Organization:** tools to organize your projects so that you don't have a single folder with hundreds of files
+1.  **Organization:** tools to organize your projects so that you don't have a single folder with hundreds of files
 
-3.  **Automation:** the power of scripting to create automated data analyses
+2.  **Automation:** the power of scripting to create automated data analyses
 
-1.  **Documentation:** difference between binary files (e.g. docx) and text files and why text files are preferred for documentation
-
-    <!-- -   *Protip:* Use markdown to document your workflow so that anyone can pick up your data and follow what you are doing -->
-    <!-- -   *Protip:* Use literate programming so that your analysis and your results are tightly connected, or better yet, unseperable -->
+3.  **Documentation:** difference between binary files (e.g. docx) and text files and why text files are preferred for documentation
 
 4.  **Dissemination:** publishing is not the end of your analysis, rather it is a way station towards your future research and the future research of others
-
 
 
 # Reproduciblility toolkit
@@ -236,20 +138,9 @@ with respect to reproducibility
 </div>
 
 
-<!-- ## Why not language X? -->
-
-<!-- - There are a number of other great programming tools out there that can also be -->
-<!-- used to improve the reproducibility of your analysis -->
-
-<!-- - The key is to use some type of language that will allow you to automate and -->
-<!-- document your analysis -->
-
-<!-- - Once you master one language you'll probably find it easier to learn another -->
-
-
 ## Once in R
 
-You could just type into the command prompt...
+You could just type into the console...
 
 - ... but that doesn't help much with documentation
 
@@ -264,12 +155,13 @@ With RStudio you can combine your programming and your documentation
 - RStudio gives you a single environment to combine your documentation and your
 analysis
 - It runs on top of R
-- Gives you a bunch of really cool features that we'll explore throughout the
+- Gives you a bunch of really cool features some of which we'll explore throughout the
 workshop
 
 <div>
 ![](../img/RStudioSplash.png)
 </div>
+
 
 ## Anatomy of RStudio
 
@@ -285,6 +177,7 @@ workshop
 </div>
 
 </div>
+
 
 ## R Packages
 
@@ -305,6 +198,7 @@ install.packages("dplyr")
 - This is just one way of installing a package, there is also a GUI approach in
 the Packages pane
 
+
 # Demo
 
 ## Goals of the demo
@@ -320,19 +214,13 @@ documents (R Markdown)
 **NOT** about understanding all the R commands, but **rather** getting the big
 picture of how using R in this way facilitates reproducible analyses
 
+
 ## R Markdown demo
 
-- Open `intro-template.Rmd`
+- Open `documents/intro-demo.Rmd`
 
 - Click on *Knit HTML* to compile the document
 
-- Important features:
-    - YAML on top
-    - Code in chunks
-    - R Markdown syntax
-        - Human readable!
-        - Limited, so not too time consuming to master
-    - Self contained workspace
 
 ## Extending the analysis
 
@@ -341,7 +229,7 @@ Great news!? We just received some more data, in bits and pieces of course:
 - `gapminder-7080.csv`
 - `gapminder-90plus.csv`
 
-Let's walk through generation of new plots for the 1970s and 1980s and 1990s plus (these new analyses are already in the `intro-tutorial.Rmd` document).
+Let's walk through generation of new plots for the 1970s and 1980s and 1990s plus (these new analyses are already in the `intro-demo.Rmd` document).
 
 Note that all code required to accomplish these tasks is also in the template.
 You do not need to come up with the R code, **knit** the document to combine
@@ -354,7 +242,7 @@ is the same as above. That's the beauty of R Markdown!
 - The analysis is self-documenting
 - It's easy to extend or refine analyses by copying and modifying code blocks
 - The results of the analysis can be disseminated by sending R Markdown and
-providing data sources, or just simply providing the generated HTML of just
+providing data sources, or just simply providing the generated HTML if just
 a summary of the analysis is needed
 
 # Reproducibility checklist
