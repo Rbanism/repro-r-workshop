@@ -1,4 +1,7 @@
 # Data processing for workshop
+# This script takes _Urbanization - Dataset - v1.xlsx and generates:
+#   - urban_population.csv
+#   - countries.csv
 
 library(tidyverse)
 
