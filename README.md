@@ -5,9 +5,9 @@
 |--:|:--|:--|:--|
 | 9:00 | _Walk-in & setup troubleshooting_ | | |
 | 9:30 | Introduction | Claudiu Forgaci | Introduction [Part 1](http://reproducible-science-curriculum.github.io/2015-05-14-reproducible-science-duke/intro-slides/intro-01-slides.html#/) and [Part 2](http://reproducible-science-curriculum.github.io/2015-05-14-reproducible-science-duke/intro-slides/intro-02-slides.html#/)|
-| 10:00 | Project organization | Barbara Vreede | |
+| 10:00 | Project organization | Barbara Vreede | [Organization slides](documents/02-organization-slides.html) |
 | 11:00 | _Coffee break_ | | |
-| 11:15 | Automating with R | Barbara Vreede | [Automation workflow](exercises/02-automation.html) |
+| 11:15 | Automating with R | Barbara Vreede | [Automation workflow](documents/03-automation.html) |
 | 12:30 | _Lunch break_ | | |
 | 13:30 | Automating with R | Barbara Vreede | |
 | 14:00 | Literate programming | Claudiu Forgaci | [Getting started with R Markdown](https://datacarpentry.org/r-socialsci/05-rmarkdown/index.html) |
