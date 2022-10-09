@@ -237,11 +237,18 @@ documents (R Markdown)
 picture of how using R in this way facilitates reproducible analyses
 
 
+## Preparation
+
+1. Download the archive you received by email with the files we will use in the workshop. 
+
+2. Follow the instructions in the email to unzip the archive into a folder that you will use as your project folder. 
+
+3. Put a green sticky note on the front of your laptop if you are ready or a purple one if you need help and a helper will approach you.
+
+
 ## R Markdown demo
 
-- Open the RStudio project you created earlier in the workshop 
-
-- Open `documents/intro-demo.Rmd`
+- Go to your project folder and double click on `documents/intro-demo.Rmd` and it should open in RStudio
 
 - Click on *Knit HTML* to compile the document
 
@@ -255,6 +262,7 @@ picture of how using R in this way facilitates reproducible analyses
 - The results of the analysis can be disseminated by sending R Markdown and
 providing data sources, or just simply providing the generated HTML if just
 a summary of the analysis is needed
+
 
 # Reproducibility checklist
 
