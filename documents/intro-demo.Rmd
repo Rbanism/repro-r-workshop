@@ -7,7 +7,7 @@ output:
   pdf_document: default
 ---
 
-This RMarkdown file contains R code you can use to complete the exercises from the Intro
+This R Markdown file contains the R code and narrative demonstrated in the Intro
 session. To see the output simply click on *Knit HTML* above. This might prompt you to 
 install and load some required packages, specifically `knitr`. Just click yes, and the a 
 document including this narrative, the R code, and figures should pop up.
@@ -16,8 +16,9 @@ document including this narrative, the R code, and figures should pop up.
 
 The `read.csv` function is used to read the data into R. Note that the argument provided 
 for this function is the complete path that leads to the dataset from your current 
-working directory (where this RMarkdown file is located). Also note that this is provided 
-as a character string, hence in quotation marks.
+directory (where this RMarkdown file is located). Also note that this is provided 
+as a character string, hence in quotation marks. The `../` in the beginning of the path
+means 'go one folder up'.
 
 ```{r}
 gap_5060 <- read.csv("../data/gapminder-5060.csv")
@@ -30,8 +31,9 @@ We will use the `ggplot2` and `dplyr` packages to make the plots for these exerc
 - `ggplot2` for plotting: This is not the only way to make this plot, but this package 
 has some aesthetic defaults that makes it attractive. Find out more about the package
 at http://ggplot2.org/.
+
 - `dplyr` for data wrangling: This is not the only way manipulate data in R, but this
-package uses piping and a simple set of verbs for most common data wranling tasks which
+package uses piping and a simple set of verbs for most common data wrangling tasks which
 makes it attractive. See the package vignette at https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html.
 
 At this point you should have installed these packages using `install.packages()`.
@@ -96,8 +98,8 @@ ggplot(data = gap_5060_NA, aes(x = year, y = lifeExp, color = country)) +
 
 Load the new data:
 ```{r}
-gap_7080 <- read.csv("data/gapminder-7080.csv")
-gap_90plus <- read.csv("data/gapminder-90plus.csv")
+gap_7080 <- read.csv("../data/gapminder-7080.csv")
+gap_90plus <- read.csv("../data/gapminder-90plus.csv")
 ```
 
 Cobine data frames with `rbind` (**r**ow bind):
