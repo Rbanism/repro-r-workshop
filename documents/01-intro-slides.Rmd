@@ -46,19 +46,31 @@ output:
 
 ## Getting to know you...
 
-
+<center>
+![](../img/repro-r-workshop-participants_Page_1.png){width=75%}
+</center>
 
 
 ## ...with respect to reproducibility
 
--   What tools do you use (Excel / R / Python / Word / plain text etc.)?
--   What would happen if your collaborator is no longer available to walk you through their analysis?
--   What made it easy / hard for reproducing your partners' work?
--   What would have to happen if
-    -   you had to swap out the dataset or extend the analysis further?
-    -   you caught further data errors and had to re-create the analysis with corrections?
-    -   you had to revert back to the original dataset?
-    
+<center>
+![](../img/repro-r-workshop-participants_Page_3.png){width=75%}
+</center>
+
+
+## ...with respect to reproducibility
+
+<center>
+![](../img/repro-r-workshop-participants_Page_5.png){width=75%}
+</center>
+
+
+## ...with respect to reproducibility
+
+<center>
+![](../img/repro-r-workshop-participants_Page_7.png){width=75%}
+</center>
+
 
 # Why should we care about reproducibility?
 
@@ -140,18 +152,27 @@ often regarded as pseudoscientific (see [Marshall, 2012](https://link.springer.c
 
 ## Once in R
 
+<div class="columns-2">
+
+<div>
+<br>
 You could just type into the console...
 
 - ... but that doesn't help much with documentation
 
 - ... but that doesn't help much with automation
+</div>
 
+<div>
+![](../img/RSplashScreen.png){width=100%}
+</div>
 
+</div>
 ## A better solution
 
+<div class="columns-2">
 With RStudio you can combine your programming and your documentation
 
-<div class="columns-2">
 - RStudio gives you a single environment to combine your documentation and your
 analysis
 - It runs on top of R
@@ -159,21 +180,22 @@ analysis
 workshop
 
 <div>
-![](../img/RStudioSplash.png)
+![](https://upload.wikimedia.org/wikipedia/commons/e/ed/RStudio_IDE_screenshot.png){width=100%}
 </div>
 
 
 ## Anatomy of RStudio
 
 <div class="columns-2">
-- Left: Console
+- Upper left: Editor
+- Lower left: Console
     - Text on top at launch: version of R that you’re running
     - Below that is the prompt
 - Upper right: Workspace and command history
 - Lower right: Plots, access to files, help, packages, data viewer
 
 <div>
-![](../img/RStudioSplash.png)
+![](https://upload.wikimedia.org/wikipedia/commons/e/ed/RStudio_IDE_screenshot.png){width=100%}
 </div>
 
 </div>
@@ -207,34 +229,30 @@ the Packages pane
 documents (R Markdown)
 - How to read data from a file
 - How to manipulate the data, and document it in a reproducible way
-    - How easy it would be to revert any changes if need be
+- How easy it would be to revert any changes if need be
 - How to subset data
-- How to make simple plots in ggplot
+- How to make simple plots
 
 **NOT** about understanding all the R commands, but **rather** getting the big
 picture of how using R in this way facilitates reproducible analyses
 
 
+## Preparation
+
+1. Download the archive you received by email with the files we will use in the workshop. 
+
+2. Follow the instructions in the email to unzip the archive into a folder that you will use as your project folder. 
+
+3. Put a green sticky note on the front of your laptop if you are ready or a purple one if you need help and a helper will approach you.
+
+
 ## R Markdown demo
 
-- Open `documents/intro-demo.Rmd`
+- Go to your project folder and double click on `documents/intro-demo.Rmd` and it should open in RStudio
 
 - Click on *Knit HTML* to compile the document
 
-
-## Extending the analysis
-
-Great news!? We just received some more data, in bits and pieces of course:
-
-- `gapminder-7080.csv`
-- `gapminder-90plus.csv`
-
-Let's walk through generation of new plots for the 1970s and 1980s and 1990s plus (these new analyses are already in the `intro-demo.Rmd` document).
-
-Note that all code required to accomplish these tasks is also in the template.
-You do not need to come up with the R code, **knit** the document to combine
-the datasets and you'll see that the code required for recreating the plots
-is the same as above. That's the beauty of R Markdown!
+- Read the output and discuss why this way of documenting research is reproducible
 
 
 ## Take aways
@@ -245,9 +263,12 @@ is the same as above. That's the beauty of R Markdown!
 providing data sources, or just simply providing the generated HTML if just
 a summary of the analysis is needed
 
+
 # Reproducibility checklist
 
 ## Reproducibility checklist
+
+Checklist available in `documents/checklist.md`
 
 - Serves as a tool to help you think about the reproducibility of your data
 analysis.
@@ -257,4 +278,3 @@ the real question being, "What can I do to improve the status of my project
 on this bullet point?"
 - With that in mind, you'll never get 100% of the bullets right for your project,
 but you'll always be improving.
-
