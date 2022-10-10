@@ -245,7 +245,7 @@ picture of how using R in this way facilitates reproducible analyses
 
 2. Follow the instructions in the email to unzip the archive into a folder that you will use as your project folder. 
 
-3. Put a green sticky note on the front of your laptop if you are ready or a purple one if you need help and a helper will approach you.
+3. Put a green sticky note on the front of your laptop if you are ready or a pink one if you need help and a helper will approach you.
 
 
 ## R Markdown demo
