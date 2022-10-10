@@ -12,7 +12,7 @@ output:
 
 ## The four dimensions of reproducibility
 
-- Organisation: structure, formats, data
+- Organisation: file structure, file naming, working with projects, etc.
 - Automation: scripting
 - Documentation: literate programming
 - Dissemination: publishing and archiving
