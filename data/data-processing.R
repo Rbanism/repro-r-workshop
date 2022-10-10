@@ -2,11 +2,14 @@
 # This script takes _Urbanization - Dataset - v1.xlsx and generates:
 #   - urban_population.csv
 #   - countries.csv
+# NB: the countries.csv generated like this does not match all countries in urban_population.csv.
+# The document has been manually adjusted, and saved as countries_manual.csv
 
 library(tidyverse)
 
-df <- readxl::read_excel("data/_Urbanization - Dataset - v1.xlsx", sheet="data-for-countries-etc-by-year")
 
+
+### REGIONS
 regions <- readxl::read_excel("data/_Urbanization - Dataset - v1.xlsx", 
                               sheet = "input-data-pop-in-cities-from-U", 
                               skip = 16)
@@ -56,6 +59,12 @@ regs <- regs %>%
 
 readr::write_csv(regs, file = "data/countries.csv")
 
+regs <- readr::read_csv("data/countries_manual.csv")
+
+
+#### MAIN DATASET
+
+df <- readxl::read_excel("data/_Urbanization - Dataset - v1.xlsx", sheet="data-for-countries-etc-by-year")
 
 # merge with main dataset
 df <- df %>%
@@ -74,6 +83,26 @@ df <- df %>%
          perc_pop_very_large_cities = `Population in cities with 5 to 10m people (% total population)` + `Population in cities with more than 10m people (% total population)`) %>%
   select(geo, code, continent, name, time, starts_with("population_"), starts_with("perc_pop"))
 
+# make tidy
+df <- df %>%
+  pivot_longer(cols = starts_with("population_"), names_to = "city_size_pop", values_to = "population_in_cities") %>%
+  pivot_longer(cols = starts_with("perc_pop_"), names_to = "city_size_perc", values_to = "percentage_of_population") %>%
+  mutate(city_size = case_when(
+    city_size_pop == "population_small_cities" & city_size_perc == "perc_pop_small_cities" ~ "small",
+    city_size_pop == "population_medium_cities" & city_size_perc == "perc_pop_medium_cities" ~ "medium",
+    city_size_pop == "population_large_cities" & city_size_perc == "perc_pop_large_cities" ~ "large",
+    city_size_pop == "population_very_large_cities" & city_size_perc == "perc_pop_very_large_cities" ~ "very large",
+    TRUE ~ "remove"
+  )) %>%
+  select(-city_size_pop, -city_size_perc) %>%
+  filter(city_size != "remove") %>%
+  mutate(population_in_cities = population_in_cities * 1000) %>%
+  rename(country = name,
+         year = time) %>%
+  select(geo,code,continent,country,year,city_size,population_in_cities,percentage_of_population)
+
+
 readr::write_csv(df, file = "data/urban_population.csv")
+
 
 
