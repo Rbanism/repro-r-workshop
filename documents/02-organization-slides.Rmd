@@ -1,5 +1,5 @@
 ---
-title: "Organization"
+title: "5 rules for pain-free project management"
 author: "Barbara Vreede"
 date: "October 10, 2022"
 output:
@@ -8,20 +8,128 @@ output:
     widescreen: yes
 ---
 
-# Project organization
 
-## A good example
+# Rule 1
+
+## Every project lives in its own folder.
+
+<center><img src="../img/folders.jpeg" width="700"></center>
+_[Source](https://c0.wallpaperflare.com/preview/56/536/894/assorted-files.jpg)_
+
+
+# Rule 2
+
+## Not all subfolders are equal.
+
+- Distinguish folder _types_, name them accordingly:
+  - **Read-only**: data, metadata
+  - **Human-generated**: code, paper, documentation
+  - **Project-generated**: clean data, figures, models...
+
+- This ensures you do not accidentally touch what you shouldn't touch...
+- ...or that your project as it progresses clutters up your system.
+
+## For example
 
 ```
---Root/
-  |-data/
-  |-documents/
+PROJECT/
+├── data/
+│   ├── raw_data/
+|   |   ├── metadata.json
+|   |   └── raw_data.csv
+│   └── clean_data/
+|       └── data_cleaned.csv
+├── results
+│   ├── figures/
+│   |   ├── chart.png
+│   └── output/
+│   |   └── statistics.csv
+├── docs/
+│   ├── manuscript.Rmd
+│   └── journal.md
+├── code/
+│   ├── analyse_data.R
+│   └── clean_data.R
+└── README.md
 ```
 
+# Rule 3
 
-## Three types of folders
+## To hell with rules, let's explain some things:
 
-- Read only (data eg)
-- Human-writable
-- Project-generated
 
+<center><img src="../img/roots.jpeg" width="700"></center>
+
+_[Source](https://www.maxpixel.net/Root-Big-Forest-Tree-Vein-Water-Strong-Old-4119112)_
+
+
+## To hell with rules, let's explain some things:
+
+
+<center><img src="../img/path.jpeg" width="700"></center>
+
+_[Source](https://www.pexels.com/photo/hiking-path-way-trail-4805/)_
+
+## So that means...
+```
+PROJECT/
+└── data/
+    └── raw_data/
+        ├── metadata.json
+        └── raw_data.csv
+```
+The ROOT is `PROJECT/`
+
+The PATH is, e.g., `PROJECT/data/raw_data/metadata.json`.
+
+# Rule 4
+
+## Everything is relative
+<center><img src="../img/relatives.jpeg" width="700"></center>
+
+_[Source](https://pixabay.com/photos/elephant-family-elephant-safari-2776148/)_
+
+
+## Everything is relative
+
+```
+PROJECT/
+└── data/
+    └── raw_data/
+        ├── metadata.json
+        └── raw_data.csv
+```
+A relative path: `PROJECT/data/raw_data/metadata.json`.
+
+An absolute path: `/Users/bvreede/work/courses/2021/PROJECT/data/raw_data/metadata.json`
+
+# Rule 5
+
+## What's in a name? Everything!
+
+- What information do you need to have if this file was ever displaced?
+- Use a schema, and be consistent. E.g.:
+  ```
+  maps_london_2018_openstreetmaps.png
+  maps_paris_2020_google-earth.png
+  maps_paris_2020_openstreetmaps.png
+  maps_paris_2022_openstreetmaps.png
+  ```
+- Sort the elements in your schema logically. E.g. `2020-05-30` instead of `30-05-2020`.
+- No spaces, and limit special characters... but do use CamelCase or connecting_underscores.
+- Document your naming practice, ESPECIALLY when using abbreviations.
+
+# Let's do this together 
+
+## To start: basic organization
+- open a single folder for today's work
+- make subfolders:
+  - `data/` (this will be read-only)
+  - `code/` (we will work in this!)
+  - `documents/` (and in this one)
+  - `results/` (this will be worked in by our project!)
+- download this zip file: **tinyurl.com/urbanism-zipped**
+- place the data and documents in the right location in your folder structure
+
+## Moving on to the next phase...
+- Let's meet R and Rstudio!
