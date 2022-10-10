@@ -53,7 +53,7 @@ PROJECT/
 └── README.md
 ```
 
-# Rule 3
+# OK, stop.
 
 ## To hell with rules, let's explain some things:
 
@@ -82,7 +82,7 @@ The ROOT is `PROJECT/`
 
 The PATH is, e.g., `PROJECT/data/raw_data/metadata.json`.
 
-# Rule 4
+# Rule 3
 
 ## Everything is relative
 <center><img src="../img/relatives.jpeg" width="700"></center>
@@ -103,7 +103,7 @@ A relative path: `PROJECT/data/raw_data/metadata.json`.
 
 An absolute path: `/Users/bvreede/work/courses/2021/PROJECT/data/raw_data/metadata.json`
 
-# Rule 5
+# Rule 4
 
 ## What's in a name? Everything!
 
@@ -118,6 +118,25 @@ An absolute path: `/Users/bvreede/work/courses/2021/PROJECT/data/raw_data/metada
 - Sort the elements in your schema logically. E.g. `2020-05-30` instead of `30-05-2020`.
 - No spaces, and limit special characters... but do use CamelCase or connecting_underscores.
 - Document your naming practice, ESPECIALLY when using abbreviations.
+
+# Rule 5
+
+## There is no such thing as TMI
+<center><img src="https://i.imgflip.com/4wx3wi.jpg" height="500"></center>
+
+## Make a README file... or more
+
+### Where?
+- In the `root/`
+- Whenever necessary, in subfolders
+
+### What information do you want to see in a README?
+- What is this project about?
+- What information do you need to understand this data?
+- Any abbreviations or coding, inside the files or in their names
+- Sources of data, links to other projects
+-...
+
 
 # Let's do this together 
 
