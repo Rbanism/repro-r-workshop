@@ -8,6 +8,11 @@ date: "2022-08-24"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Follow along!
+
+[tinyurl.com/urbanism-script](https://github.com/Rbanism/repro-r-workshop-livecode/blob/main/R/my-first-R-script.R)
+
+
 ## Make an R project
 Start from a folder, in which an R project is generated.
 This will help you work within the project, and create relative paths.
@@ -184,4 +189,12 @@ df |>
   )
 ```
 
+Finally, let's save these results:
+```{r}
+ggsave("../results/city-dwellers-over-time.png")
+
+# or
+
+ggsave(here("results", "city-dwellers-with-here.png"))
+```
 
