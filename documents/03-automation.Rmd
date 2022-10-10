@@ -8,16 +8,180 @@ date: "2022-08-24"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Make an R project
+Start from a folder, in which an R project is generated.
+This will help you work within the project, and create relative paths.
+
+In order to work from the root, we will also make use of a package called `here`.
+
+We will install it first:
+```{r eval=FALSE}
+install.packages("here")
+```
+
+
 ## Load packages
+```{r}
+library(here)
+library(tidyverse)
+```
 
 
 ## Load data
 
+First, we have to describe where the data is.
+
+We can do this in two ways: a relative and an absolute way.
+```{r}
+data_relative <- "../data/urban_population.csv"
+print(data_relative)
+
+data_absolute <- here("data", "urban_population.csv")
+print(data_absolute)
+```
+We always prefer the relative path, because that means that the code is transferrable.
+But, here we are using a special tool, which may create an absolute path, but the code
+*itself* does not contain the absolute path's information.
+So in this case, the absolute path is the one we will use!
+
+
+Then we are going to load the data.
+
+We will take a look at the Import Dataset option to get an idea about the function to use:
+
+Environment pane > Import Dataset > From Text (readr). 
+
+This gives us the code we can use:
+
+```{r}
+df <- read_csv(data_absolute)
+```
+
+Take a look at the different columns and ascertain at this point that they are
+the right type!
 
 ## Small transformations in the data
 
+We can do many things at this point.
+
+For example, we can make a selection
+
+```{r}
+df_europe <- filter(df, continent == "EUROPE")
+```
+
+We can make a new column:
+
+```{r}
+df_newccol <- mutate(df, population_in_1000 = population_in_cities/1000)
+```
+
+We can even make categories:
+
+```{r}
+df_categorized <- mutate(df, 
+                         data_type = case_when(
+                           year < 2020 ~ "data",
+                           year >= 2020 ~ "prediction"
+                           )
+                         )
+```
+
+We can summarize the data, but for this, let's look at a neat feature: the pipe
+```{r}
+df_filtered1 <- df |> filter(year < 2020)
+
+df_filtered2 <- filter(df, year < 2020)
+```
+
+Let's use this trick:
+```{r}
+df_grouped <- df |>
+  group_by(city_size) |>
+  summarise(population=sum(population_in_cities))
+```
+
+We can add things, like a separation per continent:
+```{r}
+df_grouped <- df |>
+  group_by(continent, city_size) |>
+  summarise(population=sum(population_in_cities))
+```
+
+Or even an additional calculation:
+```{r}
+df_grouped <- df |>
+  group_by(continent, city_size) |>
+  summarise(population=sum(population_in_cities),
+            average_percentage=mean(percentage_of_population)
+            )
+```
+
+And with the pipe structure, we can add filters to this workflow:
+```{r}
+df_grouped <- df |>
+  filter(year==2020) |>
+  group_by(continent, city_size) |>
+  summarise(population=sum(population_in_cities),
+            average_percentage=mean(percentage_of_population)
+            )
+```
+
 
 ## Visualize the data
+```{r}
+df_grouped |>
+  ggplot(aes(x = city_size,
+             y = average_percentage,
+             fill = continent)) +
+  geom_bar(position = position_dodge(),
+           stat="identity")
+```
+```{r}
+df |>
+  filter(year==1950) |>
+  group_by(continent, city_size) |>
+  summarise(average_percentage=mean(percentage_of_population)) |>
+  mutate(city_size=fct_relevel(city_size,c("small", "medium", "large", "very large"))) |>
+  ggplot(aes(x = city_size,
+             y = average_percentage,
+             fill = continent)) +
+  geom_bar(position = position_dodge(),
+           stat="identity") +
+  labs(title = "Average percentage of population in cities in 1950")
+```
+```{r}
+df |>
+  filter(year==2020) |>
+  group_by(continent, city_size) |>
+  summarise(average_percentage=mean(percentage_of_population)) |>
+  mutate(city_size=fct_relevel(city_size,c("small", "medium", "large", "very large"))) |>
+  ggplot(aes(x = city_size,
+             y = average_percentage,
+             fill = continent)) +
+  geom_bar(position = position_dodge(),
+           stat="identity") +
+  labs(title = "Average percentage of population in cities in 2020")
+```
+```{r}
+library(viridis)
+
+df |>
+  mutate(city_size=fct_relevel(city_size,c("small", "medium", "large", "very large"))) |>
+  ggplot(aes(x = year,
+             y = percentage_of_population,
+             color = city_size)) +
+  scale_color_viridis(discrete=T, direction=-1) +
+  geom_point(alpha=0.1) +
+  geom_smooth(method = "glm") +
+  facet_wrap("continent", ncol=2) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  labs(
+    title = "Change in city-dwelling populations on different continents",
+    y = "Percentage of population living in cities (per type)",
+    color = "Size of cities"
+  )
+```
 
 
-## Repeat with a full dataset
