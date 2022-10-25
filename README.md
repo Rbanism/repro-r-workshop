@@ -4,16 +4,16 @@
 | Time | Subject | Teacher | Materials |
 |--:|:--|:--|:--|
 | 9:00 | _Walk-in & setup troubleshooting_ | | |
-| 9:30 | Introduction | Claudiu Forgaci | [Introduction](https://github.com/Rbanism/repro-r-workshop/blob/main/documents/01-intro-slides.html) |
+| 9:30 | Introduction | Claudiu Forgaci | [Introduction](documents/01-intro-slides.html) |
 | 10:00 | Project organization | Barbara Vreede | [Organization slides](documents/02-organization-slides.html) |
 | 11:00 | _Coffee break_ | | |
 | 11:15 | Automating with R | Barbara Vreede | [Automation workflow](documents/03-automation.html) |
 | 12:30 | _Lunch break_ | | |
 | 13:30 | Automating with R | Barbara Vreede | |
-| 14:00 | Literate programming | Claudiu Forgaci | [Literate programming](https://github.com/Rbanism/repro-r-workshop/blob/main/documents/04-literate-programming-slides.html) |
+| 14:00 | Literate programming | Claudiu Forgaci | [Literate programming](documents/04-literate-programming-slides.html) |
 | 15:00 | _Coffee break_ | | |
 | 15:15 | Literate programming | Claudiu Forgaci | |
-| 15:45 | Publication | Claudiu Forgaci | [Sharing, publishing, archiving](https://github.com/Rbanism/repro-r-workshop/blob/main/documents/05-publishing-slides.html) |
+| 15:45 | Publication | Claudiu Forgaci | [Sharing, publishing, archiving](documents/05-publishing-slides.html) |
 | 16:30 | _Wrap-up & drinks_ | | |
 
 
